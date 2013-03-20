@@ -35,6 +35,6 @@ class PicturesController < ApplicationController
     p.url = params[:url]
     p.save
 
-    redirect_to pictures_path
+    redirect_to '/pictures'
   end
 end
