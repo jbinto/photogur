@@ -29,7 +29,11 @@ class PicturesController < ApplicationController
   end
 
   def new
-    
+
+  end
+
+  def create
+    render :text => "You posted! #{params}"
   end
 
   def show
