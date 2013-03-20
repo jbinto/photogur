@@ -1,4 +1,8 @@
 <h3><%= @picture.title %> <em>(by <%= @picture.artist %>)</em></h3>
+<nav id="left">
+	<a href="/pictures">←</a>
+	<a href="/pictures/<%= @picture.id %>/edit">✏</a>
+</nav>
 <div class="show">
-	<img src="<%= @picture[:url] %>">
+	<img src="<%= @picture[:url] %>" id="fullscreen">
 </div>

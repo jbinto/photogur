@@ -1,5 +1,8 @@
-<h1>Add a picture</h1>
-<form action="/pictures/<%= @picture.id %>" method="POST">
+<nav id="left">
+	<a href="/pictures">←</a>
+</nav>
+<form action="/pictures/<%= @picture.id %>" method="POST" id="new">
+	<h2>Edit this picture</h2>
 	<p>
 		<label>Artist</label><br>
 		<input type="text" name="artist" value="<%= @picture.artist %>">
@@ -16,3 +19,4 @@
 		<input type="submit">
 	</p>
 </form>
+<img src="<%= @picture.url %>" id="fullscreen">

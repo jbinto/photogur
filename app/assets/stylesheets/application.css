@@ -19,14 +19,20 @@ body {
 	background-color: #dedede;
 }
 
-nav {
+nav#right {
 	position: fixed;
 	right: 0px;
 	top: 0px;
 }
 
+nav#left {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+}
+
 nav a {
-	background-color: white;
+	background-color: rgba(255, 255, 255, 0.5);
 	color: blue;
 	font-size: 100px;
 	text-decoration: none;
@@ -100,18 +106,32 @@ form#new {
 	margin-left: auto;
 	margin-right: auto;
 	width: 300px;
+	background-color: rgba(255,255,255,0.75);
+	padding: 50px;
 }
 
 form#new input {
 	font-size: 32px;
 	width: 300px;
+	padding: 10px;
 }
 
-.show img {
+input[type="submit"] {
+	background-color: blue;
+	color: white;
+	border: 0;
+}
+
+img#fullscreen {
 	width: 100%;
-	height: 100%;
+	height: auto;
 	position: absolute;
 	top: 0;
 	left: 0;
 	z-index: -5;
+}
+
+label {
+	padding: 10px;
+	background-color: white;
 }
