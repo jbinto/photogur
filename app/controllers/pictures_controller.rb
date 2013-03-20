@@ -1,6 +1,8 @@
 class PicturesController < ApplicationController
 
-  def initialize
+  before_filter :load_pictures
+
+  def load_pictures
     @pictures = [
       {
         title: "The old church on the coast of White sea",
