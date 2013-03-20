@@ -1,7 +1,6 @@
 class PicturesController < ApplicationController
-  def index
-    @greeting = "Photogur"
 
+  def initialize
     @pictures = [
       {
         title: "The old church on the coast of White sea",
@@ -21,5 +20,14 @@ class PicturesController < ApplicationController
         url: 'http://monicao.s3.amazonaws.com/bitmaker/girl.jpg'
       }
     ]
+  end
+
+  def index
+    @greeting = "Photogur"
+  end
+
+  def show
+    id = params[:id].to_i
+    @picture = @pictures[id]
   end
 end
