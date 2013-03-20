@@ -28,6 +28,10 @@ class PicturesController < ApplicationController
     @greeting = "Photogur"
   end
 
+  def new
+    
+  end
+
   def show
     id = params[:id].to_i
     @picture = @pictures[id]
