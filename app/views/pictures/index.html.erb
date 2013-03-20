@@ -1,13 +1,15 @@
 <h2>Some interesting pictures.</h2>
 <div class="index">
 	<% @pictures.each do |pic| %>
-		<article>
-			<img src="<%= pic[:url] %>">
-			<caption>
-				<strong><%= pic[:title] %></strong> 
-				by 
-				<em><%= pic[:artist] %></em>
-			</caption>
-		</article>
+		<a href="/pictures/<%= pic.id %>">
+			<article>
+				<img src="<%= pic.url %>">
+				<caption>
+					<strong><%= pic.title %></strong> 
+					by 
+					<em><%= pic.artist %></em>
+				</caption>
+			</article>
+		</a>
 	<% end %>
 </div>

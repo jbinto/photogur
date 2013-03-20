@@ -38,3 +38,4 @@ class PicturesController < ApplicationController
     redirect_to '/pictures'
   end
 end
+
