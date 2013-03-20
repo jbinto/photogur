@@ -46,12 +46,24 @@ h1 {
 	text-align: center;
 	width: 100%;
 	margin: 0;
+
+	background-color: rgba(222, 222, 222, 0.25);
 }
 
 h2 {
 	text-align: center;
-
+	background-color: rgba(222, 222, 222, 0.75);
 }
+
+h3 {
+	text-align: center;
+	background-color: rgba(222, 222, 222, 0.75);
+
+	position: fixed;
+	bottom: 0;
+	padding: 50px;
+}
+
 
 .index article {
 	float: left;
