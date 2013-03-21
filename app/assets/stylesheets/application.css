@@ -86,11 +86,18 @@ section#flash {
 	left: 50%;
 	width: 200px;
 	margin-left: -100px;
-	text-align: center;
+	text-align: center;	
+	padding: 5px;
+}
+
+section#flash.error {
 	background-color: rgba(200, 0, 0, 0.85);
 	color: white;
-	padding: 5px;
+}
 
+section#flash.notice {
+	background-color: rgba(0, 200, 0, 0.85);
+	color: black;
 }
 
 h2 {
@@ -175,3 +182,7 @@ label {
 }
 
 a { color: blue; }
+
+.error { color: red; font-weight: bold; }
+
+.field_with_errors input { border: 2px solid red; }

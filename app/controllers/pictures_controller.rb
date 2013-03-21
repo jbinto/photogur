@@ -13,6 +13,10 @@ class PicturesController < ApplicationController
     if @picture.save
       flash[:notice] = "Picture was created."
       redirect_to pictures_path
+    else
+      # There was an error on the form.
+      flash.now[:error] = "Please fix the errors below."
+      render :new
     end
 
   end

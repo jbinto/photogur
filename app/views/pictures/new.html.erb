@@ -2,6 +2,11 @@
 	<%= link_to '←', pictures_path, :title => "Back" %>
 </nav>
 <h2>Add a picture</h2>
+
+<div class="errors">
+	<%= flash[:error] %>
+</div>
+
 <%= form_for @picture do |f| %>
 	<p>
 		<label>Artist</label><br>
@@ -9,10 +14,12 @@
 	</p>
 	<p>
 		<label>Title</label><br>
+		<div class="error"><%= @picture.errors[:title].join.capitalize %></div>
 		<%= f.text_field "title" %>
 	</p>
 	<p>
 		<label>URL</label><br>
+		<div class="error"><%= @picture.errors[:url].join.capitalize %></div>
 		<%= f.text_field "url" %>
 	</p>
 	<p>

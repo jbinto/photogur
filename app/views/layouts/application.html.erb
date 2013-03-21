@@ -8,8 +8,10 @@
 </head>
 <body>
 <h1><%= link_to 'Photogur', root_path %></h1>
-<% if flash[:notice] %>
-	<section id="flash"><%= flash[:notice] %></section>
+<% if flash[:error] %>
+	<section id="flash" class="error"><%= flash[:error] %></section>
+<% elsif flash[:notice] %>
+	<section id="flash" class="notice"><%= flash[:notice] %></section>
 <% end %>
 
 <%= yield %>
