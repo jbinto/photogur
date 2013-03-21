@@ -3,7 +3,7 @@
 	<% @pictures.each do |pic| %>
 		<a href="/pictures/<%= pic.id %>">
 			<article>
-				<img src="<%= pic.url %>">
+				<img src="<%= pic.thumbnail_url %>">
 				<caption>
 					<strong><%= pic.title %></strong> 
 					by 

@@ -12,6 +12,7 @@ class PicturesController < ApplicationController
     p.title = params[:title]
     p.artist = params[:artist]
     p.url = params[:url]
+    p.thumbnail_url = params[:thumbnail_url]
     p.save
 
     redirect_to pictures_path
@@ -34,7 +35,8 @@ class PicturesController < ApplicationController
     p.update_attributes(
       title: params[:title],
       artist: params[:artist],
-      url: params[:url]
+      url: params[:url],
+      thumbnail_url: params[:thumbnail_url]
     )
 
     # p.title = params[:title]
