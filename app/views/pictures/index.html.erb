@@ -1,3 +1,8 @@
+<nav id="left">
+	<%= link_to '+', new_picture_path, 
+		:title => "Add picture",
+		:class => "new" %>
+</nav>
 <h2>Some interesting pictures.</h2>
 <div class="index">
 	<% @pictures.each do |pic| %>

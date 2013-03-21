@@ -8,9 +8,6 @@
 </head>
 <body>
 <h1><%= link_to 'Photogur', root_path %></h1>
-<nav id="right">
-	<%= link_to '+', new_picture_path, :title => "Add picture" %>
-</nav>
 <% if flash[:notice] %>
 	<section id="flash"><%= flash[:notice] %></section>
 <% end %>

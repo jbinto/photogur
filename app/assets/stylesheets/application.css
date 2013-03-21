@@ -57,6 +57,15 @@ nav a.delete:hover {
 	color: white;
 }
 
+nav a.new {
+	color: green;
+}
+
+nav a.new:hover {
+	background-color: green;
+	color: white;
+}
+
 h1 {
 	font-size: 100px;
 	text-align: center;
