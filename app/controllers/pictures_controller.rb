@@ -30,10 +30,17 @@ class PicturesController < ApplicationController
   def update
     id = params[:id]
     p = Picture.find(id)
-    p.title = params[:title]
-    p.artist = params[:artist]
-    p.url = params[:url]
-    p.save
+
+    p.update_attributes(
+      title: params[:title],
+      artist: params[:artist],
+      url: params[:url]
+    )
+
+    # p.title = params[:title]
+    # p.artist = params[:artist]
+    # p.url = params[:url]
+    # p.save
 
     redirect_to '/pictures'
   end
