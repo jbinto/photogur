@@ -11,6 +11,9 @@
 <nav id="right">
 	<%= link_to '+', new_picture_path, :title => "Add picture" %>
 </nav>
+<% if flash[:notice] %>
+	<section id="flash"><%= flash[:notice] %></section>
+<% end %>
 
 <%= yield %>
 

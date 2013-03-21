@@ -11,6 +11,7 @@ class PicturesController < ApplicationController
   def create
     @picture = Picture.new(params[:picture])
     if @picture.save
+      flash[:notice] = "Picture was created."
       redirect_to pictures_path
     end
 
@@ -29,6 +30,7 @@ class PicturesController < ApplicationController
   def update
     @picture = Picture.find(params[:id])
     if @picture.update_attributes(params[:picture])
+      flash[:notice] = "Picture was updated."
       redirect_to @picture
     end
   end
@@ -36,6 +38,7 @@ class PicturesController < ApplicationController
   def destroy
     @picture = Picture.find(params[:id])
     if @picture.destroy
+      flash[:notice] = "Picture was deleted."
       redirect_to root_path
     end
   end
