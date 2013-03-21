@@ -102,7 +102,7 @@ h3 {
 	height: 300px;
 }
 
-form#new {
+form.new_picture, form.edit_picture {
 	margin-left: auto;
 	margin-right: auto;
 	width: 300px;
@@ -110,7 +110,7 @@ form#new {
 	padding: 50px;
 }
 
-form#new input {
+form.new_picture input, form.edit_picture input {
 	font-size: 32px;
 	width: 300px;
 	padding: 10px;

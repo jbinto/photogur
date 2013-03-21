@@ -5,17 +5,15 @@ class PicturesController < ApplicationController
   end
 
   def new
+    @picture = Picture.new
   end
 
   def create
-    p = Picture.new
-    p.title = params[:title]
-    p.artist = params[:artist]
-    p.url = params[:url]
-    p.thumbnail_url = params[:thumbnail_url]
-    p.save
+    @picture = Picture.new(params[:picture])
+    if @picture.save
+      redirect_to pictures_path
+    end
 
-    redirect_to pictures_path
   end
 
   def show
@@ -29,22 +27,10 @@ class PicturesController < ApplicationController
   end
 
   def update
-    id = params[:id]
-    p = Picture.find(id)
-
-    p.update_attributes(
-      title: params[:title],
-      artist: params[:artist],
-      url: params[:url],
-      thumbnail_url: params[:thumbnail_url]
-    )
-
-    # p.title = params[:title]
-    # p.artist = params[:artist]
-    # p.url = params[:url]
-    # p.save
-
-    redirect_to '/pictures'
+    @picture = Picture.find(params[:id])
+    if @picture.update_attributes(params[:picture])
+      redirect_to '/pictures'
+    end
   end
 end
 

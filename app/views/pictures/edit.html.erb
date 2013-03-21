@@ -1,26 +1,25 @@
 <nav id="left">
 	<a href="/pictures">←</a>
 </nav>
-<form action="/pictures/<%= @picture.id %>" method="POST" id="new">
-	<h2>Edit this picture</h2>
+<%= form_for @picture do |f| %>
 	<p>
 		<label>Artist</label><br>
-		<input type="text" name="artist" value="<%= @picture.artist %>">
+		<%= f.text_field "artist" %>
 	</p>
 	<p>
 		<label>Title</label><br>
-		<input type="text" name="title" value="<%= @picture.title %>">
+		<%= f.text_field "title" %>
 	</p>
 	<p>
 		<label>URL</label><br>
-		<input type="text" name="url" value="<%= @picture.url %>">
+		<%= f.text_field "url" %>
 	</p>
 	<p>
 		<label>Thumbnail URL</label><br>
-		<input type="text" name="url" value="<%= @picture.thumbnail_url %>">
+		<%= f.text_field "thumbnail_url" %>
 	</p>
 	<p>
-		<input type="submit">
+		<%= f.submit "Update" %>	
 	</p>
-</form>
+<% end %>
 <img src="<%= @picture.url %>" id="fullscreen">
