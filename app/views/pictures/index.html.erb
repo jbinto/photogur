@@ -1,7 +1,7 @@
 <h2>Some interesting pictures.</h2>
 <div class="index">
 	<% @pictures.each do |pic| %>
-		<a href="/pictures/<%= pic.id %>">
+		<%= link_to(pic) do %>
 			<article>
 				<img src="<%= pic.thumbnail_url %>">
 				<caption>
@@ -10,6 +10,6 @@
 					<em><%= pic.artist %></em>
 				</caption>
 			</article>
-		</a>
+		<% end %>
 	<% end %>
 </div>

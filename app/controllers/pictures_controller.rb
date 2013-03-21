@@ -29,7 +29,14 @@ class PicturesController < ApplicationController
   def update
     @picture = Picture.find(params[:id])
     if @picture.update_attributes(params[:picture])
-      redirect_to '/pictures'
+      redirect_to @picture
+    end
+  end
+
+  def destroy
+    @picture = Picture.find(params[:id])
+    if @picture.destroy
+      redirect_to root_path
     end
   end
 end

@@ -1,7 +1,7 @@
 <h3><%= @picture.title %> <em>(by <%= @picture.artist %>)</em></h3>
 <nav id="left">
-	<a href="/pictures">←</a>
-	<a href="/pictures/<%= @picture.id %>/edit">✏</a>
+	<%= link_to "←", pictures_path, :title => "Back" %>
+	<%= link_to "✏", edit_picture_path(@picture.id), :title => "Edit this picture" %>
 </nav>
 <div class="show">
 	<img src="<%= @picture[:url] %>" id="fullscreen">

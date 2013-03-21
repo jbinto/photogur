@@ -1,5 +1,11 @@
 <nav id="left">
-	<a href="/pictures">←</a>
+	<%= link_to '←', pictures_path, :title => "Back" %>
+	<%= link_to '✘', @picture, 
+			:method => :delete,
+			:confirm => "Are you sure you want to delete this picture?",
+			:title => "Delete this picture",
+			:class => "delete"
+	%>
 </nav>
 <%= form_for @picture do |f| %>
 	<p>

@@ -7,10 +7,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<h1>Photogur</h1>
+<h1><%= link_to 'Photogur', root_path %></h1>
 <nav id="right">
-	<a href="/pictures" title="Home">⌂</a>
-	<a href="/pictures/new" title="New">+</a>
+	<%= link_to '+', new_picture_path, :title => "Add picture" %>
 </nav>
 
 <%= yield %>
