@@ -186,7 +186,7 @@ img#fullscreen {
 	background-color: white;
 }
 */
-a { color: blue; }
+a { color: blue; text-decoration: none ;}
 
 .error { color: red; font-weight: bold; }
 
