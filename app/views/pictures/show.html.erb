@@ -8,5 +8,5 @@
 	<%= link_to "✏", edit_picture_path(@picture.id), :title => "Edit this picture" %>
 </nav>
 <div class="show">
-	<img src="<%= @picture[:url] %>" id="fullscreen">
+	<%= image_tag @picture.url, :id => "fullscreen" %>
 </div>
