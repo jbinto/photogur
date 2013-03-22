@@ -123,6 +123,8 @@ h3 {
 	margin-right: 10px;
 
 	-webkit-transition: all 0.5s;
+
+	position: relative;
 }
 
 .index article img {
@@ -130,8 +132,6 @@ h3 {
 	height: 200px;
 	border-radius: 40%;
 	display: block;
-
-
 
 	-webkit-transition: all 0.5s;
 }
@@ -146,6 +146,13 @@ h3 {
 .index article img:hover {
 	width: 300px;
 	height: 300px;
+}
+
+.index article span.copy {
+	color: #c0c0c0;
+	position: absolute;
+	right: 0px;
+	top: 0px;
 }
 
 form.new_picture, form.edit_picture {

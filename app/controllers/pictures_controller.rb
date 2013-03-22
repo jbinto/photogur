@@ -1,7 +1,11 @@
 class PicturesController < ApplicationController
 
   def index
-    @pictures = Picture.all
+    if params[:only_free]
+      @pictures = Picture.where(:copyrighted => false).all
+    else
+      @pictures = Picture.all
+    end
   end
 
   def new

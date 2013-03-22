@@ -14,6 +14,9 @@
 					by 
 					<em><%= pic.artist %></em>
 				</caption>
+				<% if pic.copyrighted %>
+					<span class="copy">&copy;</span>
+				<% end %>
 			</article>
 		<% end %>
 	<% end %>
