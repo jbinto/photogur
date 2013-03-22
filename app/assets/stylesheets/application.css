@@ -118,6 +118,7 @@ h3 {
 .index article {
 	/*float: left;*/
 	display: inline-block;
+	vertical-align: top;
 	width: 200px;
 	margin-right: 10px;
 
