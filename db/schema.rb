@@ -11,13 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130321125918) do
+ActiveRecord::Schema.define(:version => 20130322141254) do
 
   create_table "pictures", :force => true do |t|
-    t.string "artist"
-    t.string "title"
-    t.string "url"
-    t.string "thumbnail_url"
+    t.string  "artist"
+    t.string  "title"
+    t.string  "url"
+    t.string  "thumbnail_url"
+    t.boolean "copyrighted"
   end
 
 end

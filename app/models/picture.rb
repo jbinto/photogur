@@ -1,5 +1,10 @@
 class Picture < ActiveRecord::Base
-	attr_accessible :title, :artist, :url, :thumbnail_url
+	attr_accessible :title, 
+		:artist, 
+		:url, 
+		:thumbnail_url,
+		:copyrighted
+
 	validates :title, :presence => true
 	validates :url, 
 		:presence => true,

@@ -1,4 +1,8 @@
-<h3><%= @picture.title %> <em>(by <%= @picture.artist %>)</em></h3>
+<h3>
+	<%= @picture.title %> 
+	<em>(<%= @picture.copyrighted ? "&copy;".html_safe : "" %>
+		<%= @picture.artist %> )</em>
+</h3>
 <nav id="left">
 	<%= link_to "←", pictures_path, :title => "Back" %>
 	<%= link_to "✏", edit_picture_path(@picture.id), :title => "Edit this picture" %>

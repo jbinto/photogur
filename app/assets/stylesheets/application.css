@@ -156,13 +156,17 @@ form.new_picture, form.edit_picture {
 	padding: 50px;
 }
 
-form.new_picture input, form.edit_picture input {
+form.new_picture input[type="text"], form.edit_picture input[type="text"] {
 	font-size: 32px;
 	width: 300px;
 	padding: 10px;
 }
 
 input[type="submit"] {
+	font-size: 32px;
+	width: 300px;
+	padding: 10px;
+
 	background-color: blue;
 	color: white;
 	border: 0;
@@ -177,11 +181,11 @@ img#fullscreen {
 	z-index: -5;
 }
 
-label {
+/*label {
 	padding: 10px;
 	background-color: white;
 }
-
+*/
 a { color: blue; }
 
 .error { color: red; font-weight: bold; }
